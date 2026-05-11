@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>CSUSB Library Makerspace — Links</title>
+  <meta name="description" content="A makerspace for all Yotes. Visit us for 3D printing, electronics, sewing, graphic design, and more!" />
+  <meta name="theme-color" content="#0065BD" />
+
+  <meta property="og:title" content="CSUSB Makerspace" />
+  <meta property="og:description" content="A makerspace for all Yotes. Visit us for 3D printing, electronics, sewing, graphic design, and more!" />
+  <meta property="og:type" content="website" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --coyote-blue: #0065BD;
+      --coyote-blue-deep: #00478a;
+      --coyote-blue-soft: #2b8cd9;
+      --coyote-blue-pale: #4ca3e0;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--coyote-blue);
+      color: var(--white);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px 48px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255,255,255,0.10), transparent 60%),
+        radial-gradient(ellipse 70% 40% at 10% 30%, rgba(255,255,255,0.07), transparent 60%),
+        radial-gradient(ellipse 90% 60% at 50% 100%, rgba(0, 71, 138, 0.5), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1600' preserveAspectRatio='none'><path d='M0 180 Q300 120 600 180 T1200 180 L1200 0 L0 0 Z' fill='%234ca3e0' fill-opacity='0.22'/><path d='M0 360 Q400 280 800 360 T1600 360' stroke='%2374b8e8' stroke-opacity='0.18' stroke-width='80' fill='none'/><path d='M0 1200 Q300 1140 600 1200 T1200 1200' stroke='%2374b8e8' stroke-opacity='0.15' stroke-width='90' fill='none'/></svg>");
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 1;
+      padding-top: 40px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+      color: var(--white);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .link {
+      position: relative;
+      display: block;
+      padding: 20px 24px;
+      background: var(--white);
+      color: var(--coyote-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      transition: transform 180ms ease, background 180ms ease;
+      /* Soft torn-paper top + bottom via SVG masks */
+      -webkit-mask:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80' preserveAspectRatio='none'><path d='M0,14 C40,6 80,18 120,10 C160,3 200,16 240,9 C280,2 320,15 360,8 C380,5 390,12 400,9 L400,66 C360,74 320,62 280,70 C240,77 200,64 160,71 C120,78 80,65 40,73 C20,76 10,69 0,72 Z' fill='black'/></svg>") center / 100% 100% no-repeat;
+              mask:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80' preserveAspectRatio='none'><path d='M0,14 C40,6 80,18 120,10 C160,3 200,16 240,9 C280,2 320,15 360,8 C380,5 390,12 400,9 L400,66 C360,74 320,62 280,70 C240,77 200,64 160,71 C120,78 80,65 40,73 C20,76 10,69 0,72 Z' fill='black'/></svg>") center / 100% 100% no-repeat;
+    }
+
+    .link:hover, .link:focus-visible {
+      transform: scale(1.02);
+      outline: none;
+    }
+
+    .link:active { transform: scale(0.99); }
+
+    .link span.label {
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding: 4px 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    footer strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+/*    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }*/
+  </style>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <h1>CSUSB Makerspace</h1>
+    </header>
+
+    <nav class="links" aria-label="Links">
+      <a class="link" href="https://libguides.csusb.edu/makerspace" target="_blank" rel="noopener">
+        <span class="label">Visit our main site</span>
+      </a>
+
+      <a class="link" href="https://instagram.com/csusb_makerspace" target="_blank" rel="noopener">
+        <span class="label">Follow us on Instagram</span>
+      </a>
+    </nav>
+
+    <footer>
+      <p><strong>John M. Pfau Library · Room PL-1003</strong><br/>
+      California State University, San Bernardino</p>
+    </footer>
+  </main>
+</body>
+</html>
